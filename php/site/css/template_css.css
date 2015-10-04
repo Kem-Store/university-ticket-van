@@ -1,0 +1,148 @@
+/* CSS Document */
+.main_frame {
+	margin-top:40px;
+	margin-bottom:20px;
+}
+
+.frame_border {	height:10px; }
+.frame_lr {	background-image:url(../../images/border_lr.png); width:3px; }
+.frame_nav, .frame_body { background-color:#F8F8F8; }
+.frame_nav { border-bottom:#9d9b9b solid 1px; }
+.frame_body { padding:7px; }
+.frame_header {	background:#F8F8F8 url(../../images/bgHeader.png) bottom repeat-x; height:70px; padding:5px }
+.frame_footer { background:#EEEEEE url(../../images/bgFooter.png) repeat-x;	height:40px; padding:5px }
+/* Navigator Menu */
+.nav_menu {
+	width:130px;
+	height:34px;
+}
+#nav_ticketing { background:url(../../images/btnTicketing.png) 0px 0px no-repeat; }
+#nav_ticketing:hover { background:url(../../images/btnTicketing.png) 0px -68px no-repeat; }
+#nav_ticketing:disabled { background:url(../../images/btnTicketing.png) 0px -102px no-repeat; cursor:default; }
+
+#nav_checktravel { background:url(../../images/btnCheckTravel.png) 0px 0px no-repeat; }
+#nav_checktravel:hover { background:url(../../images/btnCheckTravel.png) 0px -68px no-repeat; }
+#nav_checktravel:disabled { background:url(../../images/btnCheckTravel.png) 0px -102px no-repeat; cursor:default; }
+
+#nav_checkticket{ background:url(../../images/btnCheckTicket.png) 0px 0px no-repeat; }
+#nav_checkticket:hover { background:url(../../images/btnCheckTicket.png) 0px -68px no-repeat; }
+#nav_checkticket:disabled { background:url(../../images/btnCheckTicket.png) 0px -102px no-repeat; cursor:default; }
+
+#nav_pay{ background:url(../../images/btnPay.png) 0px 0px no-repeat; }
+#nav_pay:hover { background:url(../../images/btnPay.png) 0px -68px no-repeat; }
+#nav_pay:disabled { background:url(../../images/btnPay.png) 0px -102px no-repeat; cursor:default; }
+
+#nav_frontpage{ background:url(../../images/btnFrontpage.png) 0px 0px no-repeat; }
+#nav_frontpage:hover { background:url(../../images/btnFrontpage.png) 0px -68px no-repeat; }
+#nav_frontpage:disabled { background:url(../../images/btnFrontpage.png) 0px -102px no-repeat; cursor:default; }
+
+#nav_contract{ background:url(../../images/btnContract.png) 0px 0px no-repeat; }
+#nav_contract:hover { background:url(../../images/btnContract.png) 0px -68px no-repeat; }
+#nav_contract:disabled { background:url(../../images/btnContract.png) 0px -102px no-repeat; cursor:default; }
+
+
+/* Login CSS */
+#box-close {
+	position:absolute;
+	display:inline-block;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	margin:6px 6px 0 0;
+	right:0px;
+	height:24px;
+	width:24px;
+}
+#box-close { background:url(../../images/close.png) 0px 0px no-repeat; }
+#box-close:hover { background:url(../../images/close.png) -24px 0px no-repeat; }
+
+#login_register, #login_user { padding-right:10px; }
+#login_welcome { padding:10px; }
+.login_menu {
+	display:inline-block;
+	text-align:center;
+	width:80px;
+	border-left:#D3D3D3 solid 1px;
+	font-weight:bold;
+}
+
+#register_form, #login_form, #travel_form, #ticket_form {
+	display:inline-table;
+	border:#999 solid 4px;
+	background-color:#FFF;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+.login_body, .register_body {
+	padding:10px;
+}
+.box_username, .box_password {
+	padding:2px 2px 2px 62px;
+	height:26px;
+}
+.box_username { background:url(../../images/inputUsername.png) 0px 0px no-repeat; }
+.box_password { background:url(../../images/inputPassword.png) 0px 0px no-repeat; }
+#username, #password {
+	color:#333333;
+	width:150px;
+	border:none;
+	font-weight:bold;
+}
+.btn_login { background:url(../../images/btnLogin.png) 0px 0px no-repeat; width:121px; height:21px; margin:15px; }
+.btn_login:hover { background:url(../../images/btnLogin.png) 0px -21px no-repeat; }
+.btn_register { background:url(../../images/btnRegister.png) 0px 0px no-repeat; width:121px; height:21px; margin:15px; }
+.btn_register:hover { background:url(../../images/btnRegister.png) 0px -21px no-repeat; }
+
+.loginbg_btn {
+	height:50px;
+	padding-left:20px;
+	background-color:#EEEEEE;
+	-webkit-border-bottom-right-radius:8px;
+	-webkit-border-bottom-left-radius:8px;
+	-moz-border-radius-bottomright:8px;
+	-moz-border-radius-bottomleft:8px;
+	border-bottom-right-radius:8px;
+	border-bottom-left-radius:8px;
+}
+#login_preload { margin:5px; height:16px; }
+#preload_view { display:none; }
+#login_error, #register_error, #vaild_error {
+	height:32px;
+	padding-left:35px;
+	color:#900;
+	font-weight:bold;
+}
+#line_menu {
+	border-left:#F8F8F8 solid 5px;
+	border-top:#AAAAAA solid 1px;
+}
+#add_travel, #add_ticket, #edit_ticket, #edit_path, #edit_place, #edit_car {
+	border-left:#F8F8F8 solid 5px;
+	border-bottom:#AAAAAA solid 1px;
+	padding:8px 8px 8px 15px;
+	cursor:pointer;
+	color:#000;
+	font-weight:bold;
+}
+#add_travel:hover, #add_ticket:hover, #edit_ticket:hover, #edit_path:hover, #edit_place:hover, #edit_car:hover { border-left:#AAAAAA solid 5px; }
+
+#chk_ticket, #update_user, #how_pay, #add_province, #yes_order, #no_order, #is_pay, #vailduser { border:#CCC solid 1px; padding:3px 10px 3px 10px; }
+#chk_ticket:hover, #update_user:hover, #how_pay:hover, #add_province:hover, #yes_order:hover, #no_order:hover, #is_pay:hover, #vailduser:hover  { background-color:#CCC; }
+#is_pay:disabled { background-color:#CCC; color:000; }
+
+.btn_addtravel { background:url(../../images/btnAdd.png) 0px 0px no-repeat; width:121px; height:21px; margin:15px; }
+.btn_addtravel:hover { background:url(../../images/btnAdd.png) 0px -21px no-repeat; }
+
+.btn_save { background:url(../../images/btnSave.png) 0px 0px no-repeat; width:121px; height:21px; margin:15px; }
+.btn_save:hover { background:url(../../images/btnSave.png) 0px -21px no-repeat; }
+.btn_cancel { background:url(../../images/btnCancel.png) 0px 0px no-repeat; width:121px; height:21px; margin:15px; }
+.btn_cancel:hover { background:url(../../images/btnCancel.png) 0px -21px no-repeat; }
+
+#pbegin, #begin, #pend, #end, #pchange {
+	display:inline-block;	
+}
+
+#user_vaild {
+	font-size:9px;	
+}
