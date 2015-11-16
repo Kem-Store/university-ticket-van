@@ -11,7 +11,7 @@ class SyncDatabase
 		foreach($loadConfig as $isGroupConfig) { foreach($isGroupConfig as $name=>$value) { $this->isConfig[$name] = $value; } }
 
 		try {
-			$this->dbConnect = @mysql_connect($this->isConfig['host'], $this->isConfig['username'], $this->isConfig['password']);
+			$this->dbConnect = mysql_connect($this->isConfig['host'], $this->isConfig['username'], $this->isConfig['password']);
 			if (!$this->dbConnect) {
 				throw new Exception('<strong>Error:</strong> '.mysql_error());
 			} else {
@@ -31,7 +31,7 @@ class SyncDatabase
 			case 'select':
 				$result = array();				
 				try {
-					$tmpQuery = @mysql_query($sqlString, $this->dbConnect);
+					$tmpQuery = mysql_query($sqlString, $this->dbConnect);
 					if(!$tmpQuery)
 					{
 						throw new Exception('<strong>SQL SELECT:</strong> '.mysql_error().'<br/><strong>SEL STRING:</strong> '.$sqlString);
@@ -44,13 +44,13 @@ class SyncDatabase
 				} catch(Exception $e) {
 					echo '<p>'.$e->getMessage().'</p>';
 				}
-				if(ereg('(limit 1)', strtolower($sqlString)) && isset($result[0]) ) { $result = $result[0]; }
-				if(ereg('(count\(\*\))', strtolower($sqlString)) && isset($result[0]) ) { $result = $result[0][0]; }
+				if(preg_match('/(limit 1)/', strtolower($sqlString)) && isset($result[0]) ) { $result = $result[0]; }
+				if(preg_match('/(count\(\*\))/', strtolower($sqlString)) && isset($result[0]) ) { $result = $result[0][0]; }
 				return $result;
 			break;
 			case 'insert':
 				try {
-					$tmpQuery = @mysql_query($sqlString, $this->dbConnect);
+					$tmpQuery = mysql_query($sqlString, $this->dbConnect);
 					if(!$tmpQuery)
 					{
 						throw new Exception('<strong>SQL INSERT:</strong> '.mysql_error().'<br/><strong>SEL STRING:</strong> '.$sqlString);
@@ -64,7 +64,7 @@ class SyncDatabase
 			break;
 			case 'update':
 				try {
-					$tmpQuery = @mysql_query($sqlString, $this->dbConnect);
+					$tmpQuery = mysql_query($sqlString, $this->dbConnect);
 					if(!$tmpQuery)
 					{
 						throw new Exception('<strong>SQL UPDATE:</strong> '.mysql_error().'<br/><strong>SEL STRING:</strong> '.$sqlString);
@@ -78,7 +78,7 @@ class SyncDatabase
 			break;
 			default:
 				try {
-					$tmpQuery = @mysql_query($sqlString, $this->dbConnect);
+					$tmpQuery = mysql_query($sqlString, $this->dbConnect);
 					if(!$tmpQuery)
 					{
 						throw new Exception('<strong>SQL Query:</strong> '.mysql_error().'<br/><strong>SEL STRING:</strong> '.$sqlString);

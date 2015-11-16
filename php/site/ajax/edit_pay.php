@@ -3,7 +3,7 @@ $database = new SyncDatabase();
 $payBankdate = '';
 $payBankid = '';
 if($_REQUEST['edit']=='view') {
-	$payBank = $database->Query("SELECT * FROM bank_pay WHERE ticket_id=$_REQUEST[id] LIMIT 1;");
+	$payBank = $database->Query("SELECT `bank_id`, `date` FROM bank_pay LIMIT 1;"); // WHERE `ticket_id`=$_REQUEST[id]
 	$payBankid = $payBank['bank_id'];
 	$payBankdate = $payBank['date'];
 	echo json_encode(array('date'=>$payBankdate, 'bank'=>$payBankid));
